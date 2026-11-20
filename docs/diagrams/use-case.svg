@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" width="1200" height="820" font-family="Geist, Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 10 5 0 10" fill="none" stroke="#1C1B19" stroke-width="1.5"/></marker>
+  </defs>
+  <rect width="1200" height="820" fill="#FAFAF8"/>
+
+  <!-- System boundary -->
+  <rect x="220" y="40" width="700" height="700" rx="10" fill="#FFFFFF" stroke="#1C1B19" stroke-width="1.5"/>
+  <text x="244" y="70" font-size="16" font-weight="700" fill="#1C1B19" letter-spacing="1">SENTRY</text>
+
+  <!-- Player associations (drawn first, under ellipses) -->
+  <g stroke="#1C1B19" stroke-width="1.5">
+    <path d="M116 360 270 110"/>
+    <path d="M116 360 270 180"/>
+    <path d="M116 360 270 250"/>
+    <path d="M116 360 270 320"/>
+    <path d="M116 360 270 390"/>
+    <path d="M116 360 270 460"/>
+    <path d="M116 360 270 530"/>
+    <path d="M116 360 270 600"/>
+    <path d="M116 360 270 670"/>
+  </g>
+
+  <!-- Primary use cases -->
+  <g fill="#FFFFFF" stroke="#1C1B19" stroke-width="1.5">
+    <ellipse cx="410" cy="110" rx="140" ry="28"/>
+    <ellipse cx="410" cy="180" rx="140" ry="28"/>
+    <ellipse cx="410" cy="250" rx="140" ry="28" stroke="#F2541B"/>
+    <ellipse cx="410" cy="320" rx="140" ry="28"/>
+    <ellipse cx="410" cy="390" rx="140" ry="28"/>
+    <ellipse cx="410" cy="460" rx="140" ry="28"/>
+    <ellipse cx="410" cy="530" rx="140" ry="28"/>
+    <ellipse cx="410" cy="600" rx="140" ry="28"/>
+    <ellipse cx="410" cy="670" rx="140" ry="28"/>
+  </g>
+  <g font-size="14" fill="#1C1B19" text-anchor="middle">
+    <text x="410" y="115">Enter strategies</text>
+    <text x="410" y="185">Set or roll seed</text>
+    <text x="410" y="255" font-weight="600">Run match</text>
+    <text x="410" y="325">Replay match</text>
+    <text x="410" y="395">View fighter stats and log</text>
+    <text x="410" y="465">Verify saved result</text>
+    <text x="410" y="535">Repeat 100 times</text>
+    <text x="410" y="605">Anchor fingerprint</text>
+    <text x="410" y="675">Search match history</text>
+  </g>
+
+  <!-- Included / extending use cases -->
+  <g fill="#FFFFFF" stroke="#1C1B19" stroke-width="1.5">
+    <ellipse cx="770" cy="200" rx="120" ry="28"/>
+    <ellipse cx="770" cy="300" rx="120" ry="28"/>
+    <ellipse cx="770" cy="420" rx="120" ry="28" stroke-dasharray="5 4"/>
+  </g>
+  <g font-size="14" fill="#1C1B19" text-anchor="middle">
+    <text x="770" y="205">Validate input</text>
+    <text x="770" y="305">Generate attributes</text>
+    <text x="770" y="425">Local fallback parser</text>
+  </g>
+
+  <!-- include / extend -->
+  <g stroke="#1C1B19" stroke-width="1.5" stroke-dasharray="6 4" fill="none" marker-end="url(#a)">
+    <path d="M546 240 652 207"/>
+    <path d="M546 260 652 293"/>
+    <path d="M770 392V330"/>
+  </g>
+  <g font-size="12" fill="#6F6C66" stroke="#FFFFFF" stroke-width="5" paint-order="stroke" stroke-linejoin="round">
+    <text x="599" y="216" text-anchor="middle">«include»</text>
+    <text x="599" y="294" text-anchor="middle">«include»</text>
+    <text x="780" y="366">«extend»</text>
+  </g>
+
+  <!-- Secondary actor associations -->
+  <g stroke="#1C1B19" stroke-width="1.5">
+    <path d="M890 300 1056 264"/>
+    <path d="M550 600 1056 574"/>
+  </g>
+
+  <!-- Actors -->
+  <g fill="none" stroke="#1C1B19" stroke-width="2" stroke-linecap="round">
+    <circle cx="90" cy="320" r="14"/>
+    <path d="M90 334V394M68 354H112M90 394 72 434M90 394 108 434"/>
+  </g>
+  <g fill="none" stroke="#6F6C66" stroke-width="2" stroke-linecap="round">
+    <circle cx="1080" cy="230" r="14"/>
+    <path d="M1080 244V304M1058 264H1102M1080 304 1062 344M1080 304 1098 344"/>
+    <circle cx="1080" cy="540" r="14"/>
+    <path d="M1080 554V614M1058 574H1102M1080 614 1062 654M1080 614 1098 654"/>
+  </g>
+  <text x="90" y="458" font-size="14" font-weight="600" fill="#1C1B19" text-anchor="middle">Player</text>
+  <g font-size="14" fill="#1C1B19" text-anchor="middle">
+    <text x="1080" y="368">OpenRouter AI</text>
+    <text x="1080" y="386">service</text>
+    <text x="1080" y="678">Monad testnet</text>
+  </g>
+  <g font-size="12" fill="#6F6C66" text-anchor="middle">
+    <text x="1080" y="404">secondary</text>
+    <text x="1080" y="696">secondary</text>
+  </g>
+
+  <text x="600" y="790" font-size="14" fill="#1C1B19" text-anchor="middle">Fig 1.2 Use case diagram</text>
+</svg>

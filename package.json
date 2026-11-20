@@ -1,0 +1,18 @@
+{
+  "name": "sentry-arena",
+  "version": "1.0.0",
+  "description": "SENTRY: Strategy-driven AI arena with reproducible match verification (MCA Semester I mini project).",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "engines": { "node": ">=20.6" },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env src/server.js",
+    "dev": "node --watch --env-file-if-exists=.env src/server.js",
+    "test": "node --test",
+    "deploy:contract": "node --env-file-if-exists=.env contracts/deploy.js"
+  },
+  "optionalDependencies": {
+    "ethers": "^6.13.4"
+  }
+}

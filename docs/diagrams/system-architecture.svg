@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760" font-family="Geist, Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#1C1B19"/></marker>
+    <marker id="ae" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#F2541B"/></marker>
+    <marker id="as" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#2D62E3"/></marker>
+  </defs>
+  <rect width="1200" height="760" fill="#FAFAF8"/>
+
+  <!-- Web client -->
+  <rect x="40" y="60" width="260" height="440" rx="10" fill="#F2F0EB" stroke="#1C1B19" stroke-width="1.5"/>
+  <text x="60" y="88" font-size="15" font-weight="600" fill="#1C1B19">Web client (browser)</text>
+  <g fill="#FFFFFF" stroke="#1C1B19" stroke-width="1.5">
+    <rect x="60" y="110" width="220" height="70" rx="10"/>
+    <rect x="60" y="200" width="220" height="90" rx="10"/>
+    <rect x="60" y="310" width="220" height="70" rx="10"/>
+    <rect x="60" y="400" width="220" height="70" rx="10"/>
+  </g>
+  <g font-size="14" font-weight="600" fill="#1C1B19">
+    <text x="76" y="138">Strategy composer</text>
+    <text x="76" y="228">Arena replay</text>
+    <text x="76" y="338">Verify view</text>
+    <text x="76" y="428">History view</text>
+  </g>
+  <g font-size="12.5" fill="#6F6C66">
+    <text x="76" y="160">two strategies and a seed</text>
+    <text x="76" y="250">client engine copy</text>
+    <text x="76" y="270">re-runs the log frame by frame</text>
+    <text x="76" y="360">recompute and compare</text>
+    <text x="76" y="450">search saved matches</text>
+  </g>
+
+  <!-- Same engine link (steel) -->
+  <path d="M280 222H610" stroke="#2D62E3" stroke-width="1.5" stroke-dasharray="6 5" fill="none" marker-end="url(#as)"/>
+  <text x="445" y="212" font-size="12" fill="#2D62E3" text-anchor="middle">same engine code, sentry-sim-1.0.0</text>
+
+  <!-- REST API -->
+  <rect x="360" y="300" width="170" height="140" rx="10" fill="#FFFFFF" stroke="#1C1B19" stroke-width="1.5"/>
+  <text x="445" y="342" font-size="15" font-weight="600" fill="#1C1B19" text-anchor="middle">REST API</text>
+  <text x="445" y="366" font-size="12.5" fill="#6F6C66" text-anchor="middle">Node.js http</text>
+  <text x="445" y="386" font-size="12.5" fill="#6F6C66" text-anchor="middle">JSON, 10 KB limit</text>
+  <text x="445" y="406" font-size="12.5" fill="#6F6C66" text-anchor="middle">static files</text>
+  <path d="M300 370H360" stroke="#1C1B19" stroke-width="1.5" marker-start="url(#a)" marker-end="url(#a)"/>
+  <text x="330" y="360" font-size="12" fill="#1C1B19" text-anchor="middle">JSON</text>
+  <path d="M530 370H590" stroke="#1C1B19" stroke-width="1.5" marker-start="url(#a)" marker-end="url(#a)"/>
+
+  <!-- Server modules -->
+  <rect x="590" y="40" width="330" height="550" rx="10" fill="#F2F0EB" stroke="#1C1B19" stroke-width="1.5"/>
+  <text x="610" y="66" font-size="15" font-weight="600" fill="#1C1B19">Server modules</text>
+  <g fill="#FFFFFF" stroke="#1C1B19" stroke-width="1.5">
+    <rect x="610" y="80" width="290" height="80" rx="10"/>
+    <rect x="610" y="180" width="290" height="80" rx="10"/>
+    <rect x="610" y="280" width="290" height="80" rx="10"/>
+    <rect x="610" y="380" width="290" height="80" rx="10"/>
+    <rect x="610" y="480" width="290" height="80" rx="10" stroke="#F2541B"/>
+  </g>
+  <g font-size="14" font-weight="600" fill="#1C1B19">
+    <text x="626" y="106">Prompt adapter</text>
+    <text x="626" y="206">Deterministic engine</text>
+    <text x="626" y="306">Fingerprint</text>
+    <text x="626" y="406">Match store</text>
+    <text x="626" y="506">Chain adapter</text>
+  </g>
+  <g font-size="12.5" fill="#6F6C66">
+    <text x="626" y="126">OpenRouter AI</text>
+    <text x="626" y="144">local rules parser as fallback</text>
+    <text x="626" y="226">sentry-sim-1.0.0</text>
+    <text x="626" y="244">FNV-1a seed hash, mulberry32 PRNG</text>
+    <text x="626" y="326">SHA-256 over canonical JSON</text>
+    <text x="626" y="344">32-byte match fingerprint</text>
+    <text x="626" y="426">JSON file or SQLite</text>
+    <text x="626" y="444">records, results, tx hashes</text>
+    <text x="626" y="526">ethers v6</text>
+    <text x="626" y="544">signs and sends anchor tx</text>
+  </g>
+  <g stroke="#1C1B19" stroke-width="1.5" marker-end="url(#a)">
+    <path d="M755 160V180"/>
+    <path d="M755 260V280"/>
+    <path d="M755 360V380"/>
+    <path d="M755 460V480"/>
+  </g>
+
+  <!-- External -->
+  <text x="1000" y="66" font-size="12.5" fill="#6F6C66">External services</text>
+  <rect x="1000" y="80" width="170" height="80" rx="10" fill="#FFFFFF" stroke="#1C1B19" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="1085" y="114" font-size="14" font-weight="600" fill="#1C1B19" text-anchor="middle">OpenRouter API</text>
+  <text x="1085" y="136" font-size="12.5" fill="#6F6C66" text-anchor="middle">hosted LLM</text>
+  <path d="M900 108H1000" stroke="#1C1B19" stroke-width="1.5" marker-end="url(#a)"/>
+  <text x="950" y="100" font-size="12" fill="#1C1B19" text-anchor="middle">strategies</text>
+  <path d="M1000 134H900" stroke="#1C1B19" stroke-width="1.5" marker-end="url(#a)"/>
+  <text x="950" y="152" font-size="12" fill="#1C1B19" text-anchor="middle">attributes</text>
+
+  <rect x="1000" y="460" width="170" height="120" rx="10" fill="#FFFFFF" stroke="#1C1B19" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="1085" y="494" font-size="14" font-weight="600" fill="#1C1B19" text-anchor="middle">Monad testnet</text>
+  <text x="1085" y="516" font-size="12.5" fill="#6F6C66" text-anchor="middle">SentryAnchor contract</text>
+  <text x="1085" y="536" font-size="12.5" fill="#6F6C66" text-anchor="middle">stores fingerprint only</text>
+  <path d="M900 508H1000" stroke="#F2541B" stroke-width="1.5" marker-end="url(#ae)"/>
+  <text x="950" y="500" font-size="12" fill="#F2541B" text-anchor="middle">fingerprint</text>
+  <path d="M1000 534H900" stroke="#1C1B19" stroke-width="1.5" marker-end="url(#a)"/>
+  <text x="950" y="552" font-size="12" fill="#1C1B19" text-anchor="middle">tx hash</text>
+
+  <!-- Privacy note -->
+  <rect x="590" y="610" width="580" height="62" rx="10" fill="#FFFFFF" stroke="#F2541B" stroke-width="1.5"/>
+  <circle cx="614" cy="634" r="5" fill="#F2541B"/>
+  <circle cx="614" cy="656" r="5" fill="#F2541B"/>
+  <text x="630" y="638" font-size="13" fill="#1C1B19">Only the 32-byte fingerprint leaves to chain.</text>
+  <text x="630" y="660" font-size="13" fill="#1C1B19">Strategy text is never sent on chain.</text>
+
+  <text x="600" y="728" font-size="14" fill="#1C1B19" text-anchor="middle">Fig 1.1 System architecture</text>
+</svg>

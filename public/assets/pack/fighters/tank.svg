@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title">
+<title id="title">Tank — defence</title>
+
+<g stroke="#1C1B19" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+  <!-- antenna -->
+  <path d="M128 39 V19" fill="none"/>
+  <circle cx="128" cy="14" r="7" fill="#6F6C66"/>
+  <!-- helmet -->
+  <path d="M86 45 Q86 25 108 25 H148 Q170 25 170 47 V74 Q170 94 149 94 H107 Q86 94 86 74 Z" fill="#2B2926"/>
+  <path d="M99 52 H157 V68 H99 Z" fill="#6F6C66" stroke-width="4"/>
+  <path d="M91 67 Q83 76 87 88" fill="none" stroke="#4A4741" stroke-width="4"/>
+  <!-- neck and torso -->
+  <path d="M111 91 H145 L151 105 L146 151 H110 L105 105 Z" fill="#242321"/>
+  <path d="M105 104 Q128 94 151 104 L147 127 Q128 138 109 127 Z" fill="#6F6C66" stroke-width="5"/>
+  <circle cx="128" cy="117" r="5" fill="#1C1B19" stroke="none"/>
+  <!-- arms -->
+  <path d="M106 104 L83 116 L76 145" fill="none" stroke="#242321" stroke-width="17"/>
+  <path d="M150 104 L173 117 L181 143" fill="none" stroke="#242321" stroke-width="17"/>
+  <circle cx="76" cy="147" r="10" fill="#242321"/>
+  <circle cx="181" cy="145" r="10" fill="#242321"/>
+  <!-- hips -->
+  <path d="M108 148 H148 L144 166 H112 Z" fill="#34312D"/>
+  <!-- legs -->
+  <path d="M116 163 L108 205" fill="none" stroke="#242321" stroke-width="18"/>
+  <path d="M140 163 L149 205" fill="none" stroke="#242321" stroke-width="18"/>
+  <path d="M107 205 L91 218 H119 L124 209" fill="#242321"/>
+  <path d="M149 205 L139 218 H168 L163 207" fill="#242321"/>
+</g>
+<g stroke="#1C1B19" stroke-width="6" stroke-linejoin="round">
+          <path d="M179 111 L211 119 L210 158 Q197 174 179 181 Q161 174 148 158 L147 119 Z" fill="#FAFAF8"/>
+          <path d="M179 126 V164 M163 145 H195" stroke="#6F6C66" stroke-width="8"/>
+        </g>
+</svg>

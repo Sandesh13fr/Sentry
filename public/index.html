@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sentry Arena</title>
+<meta name="description" content="Describe two fighters in plain English and watch a deterministic match you can replay, verify and fingerprint.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script type="module" src="app.js"></script>
+</head>
+<body>
+<div id="sprite" class="sprite-host" aria-hidden="true"></div>
+<a class="skip" href="#composer">Skip to new match</a>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Sentry home"><svg aria-hidden="true" viewBox="0 0 256 256"><use href="#logo"/></svg>Sentry</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#arena">Arena</a>
+      <a href="#proof">Verify</a>
+      <a href="#history">History</a>
+    </nav>
+    <div class="status" aria-live="polite">
+      <span class="chip" id="chipEngine"><span class="dot"></span>Engine <b class="mono" id="chipEngineText">…</b></span>
+      <span class="chip" id="chipAi"><span class="dot"></span>Parser <b id="chipAiText">…</b></span>
+      <span class="chip" id="chipChain"><span class="dot"></span>Testnet <b id="chipChainText">…</b></span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+  <section class="intro">
+    <div>
+      <h1>Describe two fighters. Watch a match you can replay exactly.</h1>
+      <p>Each strategy becomes bounded stats. A fixed seed makes the fight repeatable, and a fingerprint lets anyone check the saved result later.</p>
+    </div>
+    <p class="proto"><svg class="icon" aria-hidden="true"><use href="#icon-flask"/></svg>Academic prototype. No wagering, tokens or real money.</p>
+  </section>
+
+  <div class="grid-top" id="arena">
+    <section class="panel" aria-labelledby="composerTitle">
+      <div class="panel-h"><svg class="icon" aria-hidden="true"><use href="#icon-crossed-swords"/></svg><h2 id="composerTitle">New match</h2></div>
+      <form class="panel-b" id="composer" novalidate>
+        <div class="field">
+          <label class="label" for="stratA"><span class="swatch a"></span>Fighter A strategy<span class="count" id="countA" aria-live="polite">0 / 300</span></label>
+          <textarea id="stratA" name="strategyA" maxlength="400" aria-describedby="errA" placeholder="Rush in fast and attack relentlessly. Never defend.">Rush in fast and attack relentlessly. Never defend.</textarea>
+          <div class="err" id="errA" role="alert"></div>
+        </div>
+        <div class="field">
+          <label class="label" for="stratB"><span class="swatch b"></span>Fighter B strategy<span class="count" id="countB" aria-live="polite">0 / 300</span></label>
+          <textarea id="stratB" name="strategyB" maxlength="400" aria-describedby="errB" placeholder="Patient tank. Guard, block and counter when they tire.">Patient tank. Guard, block and counter when they tire.</textarea>
+          <div class="err" id="errB" role="alert"></div>
+        </div>
+        <div class="field">
+          <label class="label" for="seed">Seed<span class="count">blank picks one for you</span></label>
+          <div class="seed-row">
+            <input id="seed" name="seed" value="arena-001" autocomplete="off" spellcheck="false" aria-describedby="errSeed" maxlength="64">
+            <button type="button" class="btn icon-only" id="rollSeed" aria-label="Pick a random seed" title="Pick a random seed"><svg class="icon" aria-hidden="true"><use href="#icon-dice"/></svg></button>
+          </div>
+          <div class="err" id="errSeed" role="alert"></div>
+        </div>
+        <div class="err form-err" id="errForm" role="alert"></div>
+        <button class="btn primary block" type="submit" id="runBtn"><svg class="icon" aria-hidden="true"><use href="#icon-play"/></svg><span id="runLabel">Run match</span></button>
+
+        <fieldset class="toggles">
+          <legend class="t-title">Test the fallbacks</legend>
+          <label class="switch" for="aiDown"><input type="checkbox" id="aiDown" role="switch">AI service is down</label>
+          <label class="switch" for="rpcDown"><input type="checkbox" id="rpcDown" role="switch">Testnet RPC is down</label>
+        </fieldset>
+      </form>
+    </section>
+
+    <section class="panel arena" aria-label="Arena">
+      <div class="hud">
+        <div class="hp a">
+          <div class="name">Fighter A <span class="val" id="hpAVal">100</span></div>
+          <div class="track" role="progressbar" aria-label="Fighter A health" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100" id="trackA"><div class="fill" id="hpA"></div></div>
+        </div>
+        <div class="round" aria-live="off">Round<b id="roundNo">0</b>of 30</div>
+        <div class="hp b">
+          <div class="name"><span class="val" id="hpBVal">100</span> Fighter B</div>
+          <div class="track" role="progressbar" aria-label="Fighter B health" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100" id="trackB"><div class="fill" id="hpB"></div></div>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="banner" id="banner" hidden role="status"><svg class="icon" aria-hidden="true"><use href="#icon-trophy"/></svg><span id="bannerText"></span></div>
+        <svg class="scene" viewBox="0 0 760 300" role="img" aria-labelledby="sceneLabel">
+          <title id="sceneLabel">Two fighters facing each other in the arena</title>
+          <use href="#arena-floor" width="760" height="300"/>
+          <ellipse class="shadow" cx="200" cy="258" rx="58" ry="6"/>
+          <ellipse class="shadow" cx="560" cy="258" rx="58" ry="6"/>
+          <g class="fighter fighter-a" id="fA" transform="translate(100 88)">
+            <g class="body">
+              <use class="guard-ring" href="#effect-guard-ring" x="-10" y="-20" width="220" height="230" preserveAspectRatio="none"/>
+              <use class="figure" href="#fighter-striker" width="200" height="200"/>
+            </g>
+          </g>
+          <g class="fighter fighter-b" id="fB" transform="translate(660 88) scale(-1 1)">
+            <g class="body">
+              <use class="guard-ring" href="#effect-guard-ring" x="-10" y="-20" width="220" height="230" preserveAspectRatio="none"/>
+              <use class="figure" href="#fighter-tank" width="200" height="200"/>
+            </g>
+          </g>
+          <g class="fx" id="fx"></g>
+        </svg>
+      </div>
+      <div class="controls">
+        <button class="btn" id="playBtn" type="button" disabled><svg class="icon" id="playIcon" aria-hidden="true"><use href="#icon-replay"/></svg><span id="playLabel">Replay match</span></button>
+        <input class="scrub" id="scrub" type="range" min="0" max="0" value="0" step="1" aria-label="Replay position" disabled>
+        <div class="speed" role="group" aria-label="Replay speed">
+          <button type="button" data-speed="1" aria-pressed="false">1×</button>
+          <button type="button" data-speed="2" aria-pressed="true" class="on">2×</button>
+          <button type="button" data-speed="4" aria-pressed="false">4×</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="grid-mid">
+    <section class="panel" aria-labelledby="statsTitle">
+      <div class="panel-h"><h2 id="statsTitle">Fighter stats</h2><span class="sub">1 to 10, max 24 points</span></div>
+      <div class="panel-b" id="attrs"><p class="placeholder">Run a match to see how each strategy turns into stats.</p></div>
+    </section>
+
+    <section class="panel" aria-labelledby="logTitle">
+      <div class="panel-h"><h2 id="logTitle">Match log</h2><span class="sub" id="logSub"></span></div>
+      <ol class="log" id="log" tabindex="0" aria-label="Match log"></ol>
+      <p class="placeholder pad" id="logEmpty">Every move appears here, round by round.</p>
+    </section>
+
+    <section class="panel proof" id="proof" aria-labelledby="proofTitle">
+      <div class="panel-h"><svg class="icon" aria-hidden="true"><use href="#icon-hash"/></svg><h2 id="proofTitle">Result fingerprint</h2>
+        <button class="btn icon-only small push" id="copyFp" type="button" aria-label="Copy fingerprint" title="Copy fingerprint" disabled><svg class="icon" aria-hidden="true"><use href="#icon-copy"/></svg></button>
+      </div>
+      <div class="panel-b">
+        <div class="fp mono" id="fp">No match yet</div>
+        <dl class="fp-meta">
+          <dt>Seed</dt><dd id="mSeed">–</dd>
+          <dt>Engine</dt><dd id="mEngine">–</dd>
+          <dt>Saved</dt><dd id="mTime">–</dd>
+        </dl>
+        <div class="checks">
+          <div class="check">
+            <div class="check-h"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"/></svg><span class="t">Verify saved result</span><button class="btn" id="verifyBtn" type="button" disabled>Verify</button></div>
+            <div class="result" id="verifyRes" aria-live="polite">Re-runs the match from its saved stats and seed.</div>
+            <button class="linkish" id="tamperBtn" type="button" disabled>Demo: tamper with saved result</button>
+          </div>
+          <div class="check">
+            <div class="check-h"><svg class="icon" aria-hidden="true"><use href="#icon-repeat"/></svg><span class="t">Repeat 100 times</span><button class="btn" id="repeatBtn" type="button" disabled>Run test</button></div>
+            <div class="meter" role="progressbar" aria-label="Repeat test progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="repeatTrack"><i id="repeatMeter"></i></div>
+            <div class="result" id="repeatRes" aria-live="polite">Every run must give the same outcome.</div>
+          </div>
+          <div class="check">
+            <div class="check-h"><svg class="icon" aria-hidden="true"><use href="#icon-link"/></svg><span class="t">Anchor on testnet</span><button class="btn" id="anchorBtn" type="button" disabled>Anchor</button></div>
+            <div class="result" id="anchorRes" aria-live="polite">Stores only the fingerprint. Prompts stay private.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="panel history" id="history" aria-labelledby="histTitle">
+    <div class="panel-h">
+      <h2 id="histTitle">Match history</h2><span class="sub hist-count" id="histCount"></span>
+      <label class="search" for="q"><svg class="icon" aria-hidden="true"><use href="#icon-search"/></svg><span class="sr-only">Search history</span><input id="q" type="search" placeholder="Search strategy, seed or hash" autocomplete="off"></label>
+    </div>
+    <div class="table-wrap" tabindex="0" aria-label="Match history table, scrolls sideways">
+      <table>
+        <thead><tr><th scope="col">Strategies</th><th scope="col">Winner</th><th scope="col">Seed</th><th scope="col">Fingerprint</th><th scope="col">Testnet</th><th scope="col">Saved</th></tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+    <div class="empty" id="empty" hidden><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#icon-hexagon"/></svg><p id="emptyText"></p></div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <span>Sentry. MCA Semester I mini project, Bharati Vidyapeeth IMIT, Navi Mumbai.</span>
+  <span>Web client, Node.js API, OpenRouter with local fallback, Solidity on Monad testnet.</span>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 790" width="1200" height="790" font-family="Geist, Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#1C1B19"/></marker>
+    <marker id="ae" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#F2541B"/></marker>
+  </defs>
+  <rect width="1200" height="790" fill="#FAFAF8"/>
+
+  <!-- External entities -->
+  <g fill="#F2F0EB" stroke="#1C1B19" stroke-width="1.5">
+    <rect x="40" y="340" width="130" height="70" rx="10"/>
+    <rect x="470" y="30" width="160" height="56" rx="10"/>
+    <rect x="1030" y="620" width="140" height="80" rx="10"/>
+  </g>
+  <g font-size="14" font-weight="600" fill="#1C1B19" text-anchor="middle">
+    <text x="105" y="380">Player</text>
+    <text x="550" y="63">OpenRouter</text>
+    <text x="1100" y="665">Monad testnet</text>
+  </g>
+
+  <!-- Processes -->
+  <g fill="#FFFFFF" stroke="#1C1B19" stroke-width="1.5">
+    <rect x="230" y="160" width="160" height="80" rx="10"/>
+    <rect x="470" y="160" width="160" height="80" rx="10"/>
+    <rect x="710" y="160" width="160" height="80" rx="10"/>
+    <rect x="950" y="160" width="160" height="80" rx="10"/>
+    <rect x="950" y="382" width="160" height="80" rx="10"/>
+    <rect x="340" y="382" width="160" height="80" rx="10"/>
+    <rect x="700" y="620" width="160" height="80" rx="10" stroke="#F2541B"/>
+  </g>
+  <g stroke="#1C1B19" stroke-width="1">
+    <path d="M230 186H390M470 186H630M710 186H870M950 186H1110M950 408H1110M340 408H500"/>
+    <path d="M700 646H860" stroke="#F2541B"/>
+  </g>
+  <g font-size="12" fill="#6F6C66" text-anchor="middle">
+    <text x="310" y="178">1.0</text>
+    <text x="550" y="178">2.0</text>
+    <text x="790" y="178">3.0</text>
+    <text x="1030" y="178">4.0</text>
+    <text x="1030" y="400">5.0</text>
+    <text x="420" y="400">6.0</text>
+    <text x="780" y="638">7.0</text>
+  </g>
+  <g font-size="14" font-weight="600" fill="#1C1B19" text-anchor="middle">
+    <text x="310" y="219">Validate input</text>
+    <text x="550" y="219">Generate attributes</text>
+    <text x="790" y="219">Simulate match</text>
+    <text x="1030" y="219">Compute fingerprint</text>
+    <text x="1030" y="441">Store match</text>
+    <text x="420" y="441">Verify result</text>
+    <text x="780" y="679">Anchor fingerprint</text>
+  </g>
+
+  <!-- Data store D1 (open right side) -->
+  <g fill="none" stroke="#1C1B19" stroke-width="1.5">
+    <path d="M840 400H640V444H840"/>
+    <path d="M680 400V444"/>
+  </g>
+  <text x="660" y="427" font-size="13" font-weight="600" fill="#1C1B19" text-anchor="middle">D1</text>
+  <text x="760" y="427" font-size="14" fill="#1C1B19" text-anchor="middle">Match store</text>
+
+  <!-- Data flows -->
+  <g fill="none" stroke="#1C1B19" stroke-width="1.5" marker-end="url(#a)">
+    <path d="M105 340V200H230"/>
+    <path d="M390 200H470"/>
+    <path d="M525 160V86"/>
+    <path d="M575 86V160"/>
+    <path d="M630 200H710"/>
+    <path d="M870 200H950"/>
+    <path d="M790 240V292H140V340"/>
+    <path d="M1030 240V382"/>
+    <path d="M990 240V336H420V382"/>
+    <path d="M950 422H840"/>
+    <path d="M640 422H500"/>
+    <path d="M340 400H170"/>
+    <path d="M740 444V620"/>
+    <path d="M820 620V444"/>
+    <path d="M1030 676H860"/>
+  </g>
+  <path d="M860 650H1030" fill="none" stroke="#F2541B" stroke-width="1.5" marker-end="url(#ae)"/>
+
+  <g font-size="12" fill="#1C1B19">
+    <text x="118" y="192">strategies, seed</text>
+    <text x="430" y="192" text-anchor="middle">valid input</text>
+    <text x="517" y="128" text-anchor="end">strategies</text>
+    <text x="583" y="128">attributes</text>
+    <text x="670" y="192" text-anchor="middle">attributes</text>
+    <text x="910" y="178" text-anchor="middle">result</text>
+    <text x="910" y="192" text-anchor="middle">+ log</text>
+    <text x="460" y="284" text-anchor="middle">result + log (replay)</text>
+    <text x="1040" y="306">result, fingerprint</text>
+    <text x="705" y="328" text-anchor="middle">recomputed fingerprint</text>
+    <text x="895" y="414" text-anchor="middle">record</text>
+    <text x="570" y="414" text-anchor="middle">stored record</text>
+    <text x="255" y="392" text-anchor="middle">verdict</text>
+    <text x="732" y="535" text-anchor="end">fingerprint</text>
+    <text x="828" y="535">tx hash</text>
+    <text x="945" y="694" text-anchor="middle">tx hash</text>
+  </g>
+  <text x="945" y="642" font-size="12" fill="#F2541B" text-anchor="middle">fingerprint (32 bytes)</text>
+
+  <text x="600" y="758" font-size="14" fill="#1C1B19" text-anchor="middle">Fig 1.3 Data flow diagram, level 1</text>
+</svg>

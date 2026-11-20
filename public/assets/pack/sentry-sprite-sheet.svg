@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1 1">
+<title>Sentry SVG sprite library</title>
+<symbol id="fighter-striker" viewBox="0 0 256 256">
+<g stroke="#1C1B19" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+  <!-- antenna -->
+  <path d="M128 39 V19" fill="none"/>
+  <circle cx="128" cy="14" r="7" fill="#F2541B"/>
+  <!-- helmet -->
+  <path d="M91 44 Q91 28 108 28 H148 Q165 28 165 46 V72 Q165 91 146 91 H110 Q91 91 91 72 Z" fill="#2B2926"/>
+  <path d="M101 53 Q128 46 155 53 L153 69 Q128 75 103 69 Z" fill="#F2541B" stroke-width="4"/>
+  <path d="M91 67 Q83 76 87 88" fill="none" stroke="#4A4741" stroke-width="4"/>
+  <!-- neck and torso -->
+  <path d="M111 91 H145 L151 105 L146 151 H110 L105 105 Z" fill="#242321"/>
+  <path d="M105 104 Q128 94 151 104 L147 127 Q128 138 109 127 Z" fill="#F2541B" stroke-width="5"/>
+  <circle cx="128" cy="117" r="5" fill="#1C1B19" stroke="none"/>
+  <!-- arms -->
+  <path d="M106 104 L83 116 L76 145" fill="none" stroke="#242321" stroke-width="17"/>
+  <path d="M150 104 L173 117 L181 143" fill="none" stroke="#242321" stroke-width="17"/>
+  <circle cx="76" cy="147" r="10" fill="#242321"/>
+  <circle cx="181" cy="145" r="10" fill="#242321"/>
+  <!-- hips -->
+  <path d="M108 148 H148 L144 166 H112 Z" fill="#34312D"/>
+  <!-- legs -->
+  <path d="M116 163 L108 205" fill="none" stroke="#242321" stroke-width="18"/>
+  <path d="M140 163 L149 205" fill="none" stroke="#242321" stroke-width="18"/>
+  <path d="M107 205 L91 218 H119 L124 209" fill="#242321"/>
+  <path d="M149 205 L139 218 H168 L163 207" fill="#242321"/>
+</g>
+<g stroke="#1C1B19" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M184 143 L220 99" stroke="#77736C" stroke-width="8"/>
+          <path d="M220 99 L239 78 L226 112 Z" fill="#D8D5CF"/>
+          <path d="M174 148 L189 157" fill="none"/>
+        </g></symbol><symbol id="fighter-runner" viewBox="0 0 256 256">
+<g stroke="#1C1B19" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+  <!-- antenna -->
+  <path d="M128 39 V19" fill="none"/>
+  <circle cx="128" cy="14" r="7" fill="#2D62E3"/>
+  <!-- helmet -->
+  <path d="M94 39 Q105 25 128 29 Q154 25 163 43 L159 77 Q151 89 128 88 Q105 89 97 77 Z" fill="#2B2926"/>
+  <path d="M101 49 L155 49 L151 64 Q128 71 105 64 Z" fill="#2D62E3" stroke-width="4"/>
+  <path d="M91 67 Q83 76 87 88" fill="none" stroke="#4A4741" stroke-width="4"/>
+  <!-- neck and torso -->
+  <path d="M111 91 H145 L151 105 L146 151 H110 L105 105 Z" fill="#242321"/>
+  <path d="M105 104 Q128 94 151 104 L147 127 Q128 138 109 127 Z" fill="#2D62E3" stroke-width="5"/>
+  <circle cx="128" cy="117" r="5" fill="#1C1B19" stroke="none"/>
+  <!-- arms -->
+  <path d="M106 104 L83 116 L76 145" fill="none" stroke="#242321" stroke-width="17"/>
+  <path d="M150 104 L173 117 L181 143" fill="none" stroke="#242321" stroke-width="17"/>
+  <circle cx="76" cy="147" r="10" fill="#242321"/>
+  <circle cx="181" cy="145" r="10" fill="#242321"/>
+  <!-- hips -->
+  <path d="M108 148 H148 L144 166 H112 Z" fill="#34312D"/>
+  <!-- legs -->
+  <path d="M116 163 L108 205" fill="none" stroke="#242321" stroke-width="18"/>
+  <path d="M140 163 L149 205" fill="none" stroke="#242321" stroke-width="18"/>
+  <path d="M107 205 L91 218 H119 L124 209" fill="#242321"/>
+  <path d="M149 205 L139 218 H168 L163 207" fill="#242321"/>
+</g>
+<g stroke="#1C1B19" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M181 143 L207 129" fill="none"/>
+          <path d="M72 119 L53 119 M76 130 L48 130 M80 141 L58 141" stroke="#6F6C66" stroke-width="4"/>
+          <path d="M104 214 L83 226 M151 213 L173 226" stroke="#1C1B19" stroke-width="5"/>
+        </g></symbol><symbol id="fighter-tank" viewBox="0 0 256 256">
+<g stroke="#1C1B19" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+  <!-- antenna -->
+  <path d="M128 39 V19" fill="none"/>
+  <circle cx="128" cy="14" r="7" fill="#6F6C66"/>
+  <!-- helmet -->
+  <path d="M86 45 Q86 25 108 25 H148 Q170 25 170 47 V74 Q170 94 149 94 H107 Q86 94 86 74 Z" fill="#2B2926"/>
+  <path d="M99 52 H157 V68 H99 Z" fill="#6F6C66" stroke-width="4"/>
+  <path d="M91 67 Q83 76 87 88" fill="none" stroke="#4A4741" stroke-width="4"/>
+  <!-- neck and torso -->
+  <path d="M111 91 H145 L151 105 L146 151 H110 L105 105 Z" fill="#242321"/>
+  <path d="M105 104 Q128 94 151 104 L147 127 Q128 138 109 127 Z" fill="#6F6C66" stroke-width="5"/>
+  <circle cx="128" cy="117" r="5" fill="#1C1B19" stroke="none"/>
+  <!-- arms -->
+  <path d="M106 104 L83 116 L76 145" fill="none" stroke="#242321" stroke-width="17"/>
+  <path d="M150 104 L173 117 L181 143" fill="none" stroke="#242321" stroke-width="17"/>
+  <circle cx="76" cy="147" r="10" fill="#242321"/>
+  <circle cx="181" cy="145" r="10" fill="#242321"/>
+  <!-- hips -->
+  <path d="M108 148 H148 L144 166 H112 Z" fill="#34312D"/>
+  <!-- legs -->
+  <path d="M116 163 L108 205" fill="none" stroke="#242321" stroke-width="18"/>
+  <path d="M140 163 L149 205" fill="none" stroke="#242321" stroke-width="18"/>
+  <path d="M107 205 L91 218 H119 L124 209" fill="#242321"/>
+  <path d="M149 205 L139 218 H168 L163 207" fill="#242321"/>
+</g>
+<g stroke="#1C1B19" stroke-width="6" stroke-linejoin="round">
+          <path d="M179 111 L211 119 L210 158 Q197 174 179 181 Q161 174 148 158 L147 119 Z" fill="#FAFAF8"/>
+          <path d="M179 126 V164 M163 145 H195" stroke="#6F6C66" stroke-width="8"/>
+        </g></symbol><symbol id="effect-hit-spark" viewBox="0 0 256 256"><path d="M128 12 L145 91 L208 48 L165 111 L244 128 L165 145 L208 208 L145 165 L128 244 L111 165 L48 208 L91 145 L12 128 L91 111 L48 48 L111 91 Z" fill="#F2541B" stroke="#1C1B19" stroke-width="8" stroke-linejoin="round"/></symbol><symbol id="effect-critical-burst" viewBox="0 0 256 256"><path d="M128 8 L148 76 L215 37 L178 100 L248 128 L178 151 L216 219 L148 180 L128 248 L108 180 L40 219 L78 151 L8 128 L78 100 L40 37 L108 76 Z" fill="#F6B544" stroke="#1C1B19" stroke-width="8" stroke-linejoin="round"/><path d="M128 72 L140 116 L184 128 L140 140 L128 184 L116 140 L72 128 L116 116 Z" fill="#F2541B"/></symbol><symbol id="effect-whiff" viewBox="0 0 256 256"><path d="M34 171 C70 55 144 36 212 62" fill="none" stroke="#6F6C66" stroke-width="13" stroke-linecap="round"/><path d="M59 207 C95 113 155 94 223 113" fill="none" stroke="#B7B3AB" stroke-width="10" stroke-linecap="round"/></symbol><symbol id="effect-guard-ring" viewBox="0 0 256 256"><ellipse cx="128" cy="128" rx="105" ry="58" fill="none" stroke="#6F6C66" stroke-width="8" stroke-dasharray="15 13"/></symbol><symbol id="effect-ko" viewBox="0 0 256 256"><g transform="rotate(-18 128 128)" stroke="#1C1B19" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"><circle cx="151" cy="54" r="18" fill="#1C1B19"/><path d="M137 78 L111 128 L72 145 M113 126 L163 145 L188 188 M117 112 L175 91 M109 127 L75 103"/></g><text x="128" y="34" font-family="Arial,sans-serif" font-size="31" font-weight="800" text-anchor="middle" fill="#1C1B19">KO</text></symbol><symbol id="icon-play" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4 L20 12 L6 20 Z"/></g></symbol><symbol id="icon-pause" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 5 V19 M17 5 V19"/></g></symbol><symbol id="icon-replay" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a8 8 0 1 1 2 6"/><path d="M4 5v6h6"/></g></symbol><symbol id="icon-dice" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 8h.01 M16 8h.01 M12 12h.01 M8 16h.01 M16 16h.01"/></g></symbol><symbol id="icon-check-circle" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m7 12 3 3 7-7"/></g></symbol><symbol id="icon-x-circle" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m9 9 6 6m0-6-6 6"/></g></symbol><symbol id="icon-alert-triangle" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 22 20H2Z"/><path d="M12 9v5m0 3h.01"/></g></symbol><symbol id="icon-link" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-2 2"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l2-2"/></g></symbol><symbol id="icon-hash" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9h14M4 15h14M10 3 8 21M16 3l-2 18"/></g></symbol><symbol id="icon-ai-spark" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 2.2 7.8L22 12l-7.8 2.2L12 22l-2.2-7.8L2 12l7.8-2.2Z"/></g></symbol><symbol id="icon-cpu" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4m6-4v4M9 18v4m6-4v4M2 9h4m-4 6h4m12-6h4m-4 6h4"/></g></symbol><symbol id="icon-search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></g></symbol><symbol id="icon-copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h3"/></g></symbol><symbol id="icon-repeat" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m17 2 4 4-4 4"/><path d="M3 11V9a3 3 0 0 1 3-3h15M7 22l-4-4 4-4"/><path d="M21 13v2a3 3 0 0 1-3 3H3"/></g></symbol><symbol id="icon-crossed-swords" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m4 4 16 16M20 4 4 20"/><path d="m3 7 4-4 2 2-4 4zm12 12 4-4 2 2-4 4z"/></g></symbol><symbol id="icon-trophy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8m-4-4v4M7 4h10v6a5 5 0 0 1-10 0Z"/><path d="M7 6H3v3a4 4 0 0 0 4 4m10-7h4v3a4 4 0 0 1-4 4"/></g></symbol><symbol id="icon-flask" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6m-5 0v6L4 19a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3L14 9V3"/><path d="M7 16h10"/></g></symbol><symbol id="icon-hexagon" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 9 5v10l-9 5-9-5V7Z"/></g></symbol>
+</svg>

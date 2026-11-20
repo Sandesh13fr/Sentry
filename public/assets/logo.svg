@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title">
+<title id="title">Sentry shield mark</title>
+<path d="M128 12 218 63 V193 L128 244 38 193 V63 Z" fill="#F2541B"/>
+<path d="M128 34 197 73 V183 L128 222 59 183 V73 Z" fill="none" stroke="#FFFFFF" stroke-opacity=".55" stroke-width="5"/>
+<rect x="75" y="111" width="106" height="34" rx="17" fill="#FFFFFF"/>
+<circle cx="128" cy="128" r="10" fill="#F2541B"/>
+</svg>
